@@ -41,14 +41,14 @@ const DrumContainer=({power,hadlePower,handleOutput,data,guiter,toggleInstrument
      // eslint-disable-next-line
     const guiterAudio={
       q:'announcement',
-      w:"crystal-logo",
-      e:'guitar-riff',
+      w:"crystal logo",
+      e:'guitar riff',
       a:"mysterious",
-      s:"record_scratch",
+      s:"record scratch",
       d:"acoustic",
       z:"success",
       x:"guitarra",
-      c:"stingers-"
+      c:"stingers"
 
     }
 

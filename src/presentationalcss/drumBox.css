@@ -1,4 +1,4 @@
-#drumpage{
+#drum-machinOuter{
 
 
     display:flex ;
@@ -11,7 +11,7 @@
 #h1{
     font-size: 30px;
 }
-#outerBox{
+#drum-machine{
     margin-top: 40px;
    display: flex; 
     justify-content: center;
@@ -55,7 +55,7 @@
     margin-top: 10px;
     
 }
-#buttons{
+ .drum-pad{
     padding: 25px 40px;
     cursor: pointer;
     background-color: #eaeaea;
@@ -64,11 +64,14 @@
     box-shadow: inset;
     font-size: 17px;
 }
-#buttons:hover{
+.clip{
+    display: none;
+}
+.drum-pad:hover{
      color: rgb(51, 157, 192);
 }
  
-#buttons:active{
+.drum-pad:active{
     background-color:#acaaaa;
 }
 
@@ -84,7 +87,7 @@
      
      
 }
-#outPut{
+#display{
     background-color: #eaeaea ;
     width: 135px;
     height: 50px;

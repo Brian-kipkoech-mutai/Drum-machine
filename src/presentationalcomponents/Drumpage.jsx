@@ -41,75 +41,60 @@ const DrumPage=({AudioRef,handleClick,volume,handleVolumeChange,hadlePower,power
     console.log('data',data);
 
     return(
-      <div id="drumpage"> 
+      <div id="drum-machinOuter"> 
         <div id="h1">Drum machine</div>
-        <div id='outerBox' > 
+        <div id='drum-machine' > 
         
         <div id='drumBox'  >
          <div id='top'>
-         <div >
-<audio ref={AudioRef.q }   src={guiter?qguiter:q} style={{display:'none'}}>     </audio> 
-<button onClick={()=> handleClick( 'q')}  id='buttons' 
-   style={activeKey==='q'?{backgroundColor:activeButtonColour}:null}
->q</button>
-      
-
+         <div  className='drum-pad' onClick={ power?()=> handleClick('q'):null} style={activeKey==='q'?{backgroundColor:activeButtonColour}:null} id='Q'>
+<audio ref={AudioRef.q }   src={guiter?qguiter:q}  className='clip' id="Q">     </audio> 
+ 
+          Q
         </div>
-        <div>
-        <audio ref={AudioRef.w }   src={guiter?wguiter:w} style={{display:'none'}}>     </audio>
-<button onClick={ power?()=> handleClick('w'):null} id='buttons'
- style={activeKey==='w'?{backgroundColor:activeButtonColour}:null}>w</button>
+        <div  className='drum-pad' onClick={ power?()=> handleClick('w'):null} style={activeKey==='w'?{backgroundColor:activeButtonColour}:null} id='W'>
+        <audio ref={AudioRef.w }   src={guiter?wguiter:w} className='clip' id="W">     </audio>
+                     W
       
         </div>
-        <div>
-        <audio ref={AudioRef.e }   src={guiter?eguiter:e} style={{display:'none'}}>     </audio>
-<button onClick={ power?()=> handleClick('e'):null} id='buttons' 
- style={activeKey==='e'?{backgroundColor:activeButtonColour}:null}>e</button>
+        <div  className='drum-pad' onClick={ power?()=> handleClick('e'):null} style={activeKey==='e'?{backgroundColor:activeButtonColour}:null} id='E'>
+        <audio ref={AudioRef.e }   src={guiter?eguiter:e} className='clip' id="E">     </audio>
+                    E
       
         </div>
          </div>
           <div id="middle">
-          <div>
-        <audio ref={AudioRef.a}   src={guiter?aguiter:a} style={{display:'none'}}>     </audio>
-<button onClick={ power?()=> handleClick('a'):null} id='buttons'
- style={activeKey==='a'?{backgroundColor:activeButtonColour}:null}>a</button>
+          <div  className='drum-pad' onClick={ power?()=> handleClick('a'):null} style={activeKey==='a'?{backgroundColor:activeButtonColour}:null} id='A'>
+        <audio ref={AudioRef.a}   src={guiter?aguiter:a} className='clip' id="A">     </audio>
+                        A
       
         </div>
-        <div>
-        <audio ref={AudioRef.s }   src={guiter?sguiter:s} style={{display:'none'}}>     </audio>
-<button onClick={  power?()=> handleClick('s'):null} id='buttons' 
-
-style={activeKey==='s'?{backgroundColor:activeButtonColour}:null}>s</button>
+        <div  className='drum-pad' onClick={ power?()=> handleClick('s'):null} style={activeKey==='s'?{backgroundColor:activeButtonColour}:null} id='S'>
+        <audio ref={AudioRef.s }   src={guiter?sguiter:s} className='clip' id="S">     </audio>
+                          S
        
         </div>
-        <div>
-        <audio ref={AudioRef.d }   src={guiter?dguiter:d} style={{display:'none'}}>     </audio>
-<button onClick={ power?()=> handleClick('d'):null} id='buttons'
- style={activeKey==='d'?{backgroundColor:activeButtonColour}:null}
->d</button>
+        <div className='drum-pad'  onClick={ power?()=> handleClick('d'):null} style={activeKey==='d'?{backgroundColor:activeButtonColour}:null} id='D'>
+        <audio ref={AudioRef.d }   src={guiter?dguiter:d} className='clip' id="D">     </audio>
+                      D
       
         </div>
           </div>
           <div id="bottom">
           
-        <div>
-        <audio ref={AudioRef.z }   src={guiter?zguiter:z} style={{display:'none'}}>     </audio>
-<button onClick={  power?()=> handleClick('z'):null}  id='buttons'
-  style={activeKey==='z'?{backgroundColor:activeButtonColour}:null}
->z</button>
+        <div className='drum-pad' onClick={ power?()=> handleClick('z'):null} style={activeKey==='z'?{backgroundColor:activeButtonColour}:null} id='Z'>
+        <audio ref={AudioRef.z }   src={guiter?zguiter:z} className='clip' id="Z">     </audio>
+              Z
        
         </div>
-        <div>
-        <audio ref={AudioRef.x }   src={guiter?xguiter:x} style={{display:'none'}}>     </audio>
-<button onClick={ power?()=> handleClick('x'):null} id='buttons'
- style={activeKey==='x'?{backgroundColor:activeButtonColour}:null}
->x</button>
+        <div className='drum-pad' onClick={ power?()=> handleClick('x'):null} style={activeKey==='x'?{backgroundColor:activeButtonColour}:null} id='X'>
+        <audio ref={AudioRef.x }   src={guiter?xguiter:x} className='clip' id="X">     </audio>
+                   X
        
         </div>
-        <div>
-        <audio ref={AudioRef.c }   src={guiter?cguiter:c} style={{display:'none'}}>     </audio>
-<button onClick={ power?()=> handleClick('c'):null} id='buttons'
- style={activeKey==='c'?{backgroundColor:activeButtonColour}:null}>c</button>
+        <div className='drum-pad'  onClick={ power?()=> handleClick('c'):null} style={activeKey==='c'?{backgroundColor:activeButtonColour}:null} id='C'>
+        <audio ref={AudioRef.c }   src={guiter?cguiter:c} className='clip' id="C">     </audio>
+                  C
      
         </div>
           </div>
@@ -125,7 +110,7 @@ style={activeKey==='s'?{backgroundColor:activeButtonColour}:null}>s</button>
      
         
 
-         <div id="outPut">{typeof(data)==='number'?  ('Volume: '+Math.floor(data*100)):data}</div>
+         <div id="display">{typeof(data)==='number'?  ('Volume: '+Math.floor(data*100)):data}</div>
         <input   
         id='volumeButton'
         type="range"
@@ -157,7 +142,7 @@ style={activeKey==='s'?{backgroundColor:activeButtonColour}:null}>s</button>
          </div>
         </div>
         
-        <div id="developer"> Designed and coded  by : <a href="sds" >Brian Kipkoech</a></div>
+        <div id="developer"> Designed and coded  by : <a href="https://www.linkedin.com/in/brian-kipkoech-71b5b9248/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BdMBk8JooTISqfzJUPqjBkQ%3D%3D" >Brian Kipkoech</a></div>
         </div>
     )
 }
