@@ -38,6 +38,19 @@ const DrumContainer=({power,hadlePower,handleOutput,data,guiter,toggleInstrument
       x:"Kick n Hat",
       c:"Cev H2"
     }
+     // eslint-disable-next-line
+    const guiterAudio={
+      q:'announcement',
+      w:"crystal-logo",
+      e:'guitar-riff',
+      a:"mysterious",
+      s:"record_scratch",
+      d:"acoustic",
+      z:"success",
+      x:"guitarra",
+      c:"stingers-"
+
+    }
 
      
 
@@ -49,7 +62,7 @@ const DrumContainer=({power,hadlePower,handleOutput,data,guiter,toggleInstrument
           audio.currentTime = 0;
           audio.play();
            //  displaying the sound name in the ui
-          handleOutput(audios[sound]);
+          handleOutput( guiter?guiterAudio[sound] :audios[sound]);
           setTimeout(()=>{
             handleOutput("")
           },500)
@@ -57,7 +70,7 @@ const DrumContainer=({power,hadlePower,handleOutput,data,guiter,toggleInstrument
         else{
           return null
         }
-      }, [AudioRef,power,audios,handleOutput]);
+      }, [AudioRef,power,audios,handleOutput,guiterAudio,guiter]);
     
     const handleVolumeChange=(event)=>{
           const newVolume= parseFloat(event.target.value);
