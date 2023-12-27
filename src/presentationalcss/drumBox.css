@@ -1,0 +1,136 @@
+#drumpage{
+
+
+    display:flex ;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+     background-color: #eaeaea;
+}
+
+#h1{
+    font-size: 30px;
+}
+#outerBox{
+    margin-top: 40px;
+   display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    gap: 50px;
+    background-color:#797979;
+    border-radius: 20px;
+    
+    
+    
+
+}
+#drumBox{
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin: 30px;
+    
+
+}
+
+#top{
+    display: flex;
+    gap: 20px;
+    
+}
+#middle{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    
+}
+#bottom{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    
+}
+#buttons{
+    padding: 25px 40px;
+    cursor: pointer;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset;
+    font-size: 17px;
+}
+#buttons:hover{
+     color: rgb(51, 157, 192);
+}
+ 
+#buttons:active{
+    background-color:#acaaaa;
+}
+
+#controls{
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+      justify-content: space-evenly;
+
+     height: 250px;
+     margin: 30px;
+      
+     
+     
+}
+#outPut{
+    background-color: #eaeaea ;
+    width: 110px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: no-drop;
+    font-size: 20px;
+}
+
+#togglePower{
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+#togglePower:active{
+    background-color: rgb(207, 201, 201);
+}
+
+   /***** working on the below  styling  ideally it should change the colour of the input 'range' *****/   
+   
+#volumeButton{
+    color: #eaeaea;
+    background: #797979;
+    cursor: pointer;
+}
+
+#developer{
+    margin-top: 30px;
+}
+#toggleInstruments{
+    padding: 10px 20px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: 20px;
+
+}
+#guide{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #eaeaea;
+}
