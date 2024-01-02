@@ -142,7 +142,7 @@ const DrumPage=({AudioRef,handleClick,volume,handleVolumeChange,hadlePower,power
          </div>
         </div>
         
-        <div id="developer"> Designed and coded  by : <a href="https://www.linkedin.com/in/brian-kipkoech-71b5b9248/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BdMBk8JooTISqfzJUPqjBkQ%3D%3D" >Brian Kipkoech</a></div>
+        <div id="developer"> Designed and coded  by : <a href="https://www.linkedin.com/in/brian-kipkoech-71b5b9248?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9nnAF3gTQq2oeiliYkWdyA%3D%3D">Brian kipkoech</a></div>
         </div>
     )
 }
